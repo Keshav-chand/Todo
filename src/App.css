@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background: #8758ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.center-container {
+  height: 500px;
+  width: 500px;
+  background: #1A1A40;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.app-heading {
+  padding: 4px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-left: 10px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.input-box-todo {
+  margin-left: 10px;
+  width: 70%;
+  height: 40px;
+  border-radius: 14px;
+  border: 1px solid #8758ff;
+  padding: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  outline: none;
+  color: #121111;
+  font-size: 1rem;
+}
+
+.add-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #316fc1;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(11, 10, 10, 0.3);
+  transition: 0.3s;
+}
+
+.add-btn:active {
+  box-shadow: none;
+}
+
+.list-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 1rem;
+}
+
+.list-item {
+  list-style-type: none;
+  background: #8758ff;
+  border: 2px solid rgb(161, 158, 158);
   color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.icons {
+  position: absolute;
+  right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icons i {
+  margin: 0 4px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+.icon-delete:hover {
+  color: red;
 }
